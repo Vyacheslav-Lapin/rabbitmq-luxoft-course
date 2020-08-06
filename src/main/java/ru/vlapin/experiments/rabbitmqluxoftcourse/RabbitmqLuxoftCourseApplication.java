@@ -36,7 +36,9 @@ public class RabbitmqLuxoftCourseApplication {
 
   @Bean
   Binding binding() {
-    return BindingBuilder.bind(queue()).to(topicExchange()).with("my.#");
+    return BindingBuilder.bind(queue())
+               .to(topicExchange())
+               .with("my.#");
   }
 
   @Bean
